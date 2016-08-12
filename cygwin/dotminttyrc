@@ -1,0 +1,11 @@
+BoldAsFont=no
+Font=YaHei Consolas Hybrid
+FontHeight=12
+#BackgroundColour=0,43,53
+BackgroundColour=11,22,33
+ForegroundColour=191,191,191
+FontSmoothing=full
+# 关闭CTRL_+/-/0放大缩小功能，避免与vim窗口调整冲突
+ZoomShortcuts=no
+CursorType=block
+Scrollbar=none

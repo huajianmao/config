@@ -1,0 +1,35 @@
+let mapleader="," 
+
+set nocompatible              " be improved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+" Bundle 'plasticboy/vim-markdown'
+Bundle "kien/ctrlp.vim"
+Bundle 'flazz/vim-colorschemes'
+Bundle "tpope/vim-surround"
+" Bundle "Yggdroot/indentLine"
+Bundle 'Lokaltog/vim-easymotion'
+Bundle "bling/vim-airline"
+Bundle "scrooloose/syntastic"
+Bundle "scrooloose/nerdtree"
+Bundle 'taglist.vim'
+Bundle 'ervandew/supertab'
+" Plugin 'artur-shaik/vim-javacomplete2'
+" Bundle 'Valloric/YouCompleteMe'
+" Bundle 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+" Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+Plugin 'Align'
+" Plugin 'Vim-R-plugin'
+" Bundle 'tpope/vim-rails'
+" Bundle 'airblade/vim-rooter'
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+
+runtime! config/**/*.vim

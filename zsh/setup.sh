@@ -19,9 +19,12 @@ if [ -d $OMZRC ];
 then
   mv $OMZRC $OMZRC.`date +%Y-%m-%d_%H:%M:%S`
 fi
-ln -s $OHMYZSH $OMZRC
+# ln -s $OHMYZSH $OMZRC
 
 echo "To install patch font into $FONTDIR, root privilliage needed!"
 sudo mkdir -p $FONTDIR
 sudo cp $FONTFILE $FONTDIR
 sudo fc-cache -fv
+
+git clone https://github.com/robbyrussell/oh-my-zsh.git $OMZRC
+cp hjmao.zsh-theme $OMZRC/themes/

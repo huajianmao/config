@@ -17,6 +17,8 @@ Bundle "scrooloose/syntastic"
 Bundle "scrooloose/nerdtree"
 Bundle 'taglist.vim'
 Bundle 'ervandew/supertab'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " Plugin 'artur-shaik/vim-javacomplete2'
 " Bundle 'Valloric/YouCompleteMe'
 " Bundle 'SirVer/ultisnips'

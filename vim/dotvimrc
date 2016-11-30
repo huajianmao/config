@@ -12,8 +12,10 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
+
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'bling/vim-bufferline'
 Bundle 'scrooloose/syntastic'

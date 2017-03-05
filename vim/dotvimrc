@@ -27,6 +27,9 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'justinj/vim-react-snippets'
 
+Bundle 'derekwyatt/vim-scala'
+Bundle 'ntpeters/vim-better-whitespace'
+
 " Bundle 'artur-shaik/vim-javacomplete2'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'

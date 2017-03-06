@@ -99,3 +99,5 @@ export EDITOR=vim
 # predict-on
 
 export DISPLAY=:0.0
+unsetopt nomatch
+export SPARK_PREPEND_CLASSES=true

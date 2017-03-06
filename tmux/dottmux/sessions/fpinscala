@@ -1,0 +1,6 @@
+new -s fpinscala -n terminal
+neww -n dev 'vim; zsh'
+splitw -v -p 20 -t 0 bash -c 'sbt ~test'
+splitw -h -p 50 -t 1 bash -c 'sbt ~scalastyle'
+selectw -t 1
+selectp -t 0

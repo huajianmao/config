@@ -10,5 +10,5 @@ then
 fi
 ln -s $CONFIG $RCFILE
 
-mkdir -p ~/.tmux/sessions
-ln -s $DOTTMUX/* ~/.tmux/sessions/
+mkdir -p ~/.tmux/
+ln -s $DOTTMUX/* ~/.tmux/

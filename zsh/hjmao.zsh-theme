@@ -12,7 +12,7 @@ local git_info='$(git_prompt_info)'
 local prompt_char='$(prompt_char)'
 
 
-PROMPT="┌─%{$FG[040]%}%n%{$reset_color%} at %{$FG[033]%}$(box_name)%{$reset_color%} in $FG[226]%}${current_dir}%{$reset_color%}${git_info}
+PROMPT="┌─%{$FG[040]%}%n%{$reset_color%} at %{$FG[033]%}$(box_name)%{$reset_color%} in $FG[031]%}${current_dir}%{$reset_color%}${git_info}
 └─${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" <%{$fg[255]%}"

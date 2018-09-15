@@ -81,17 +81,20 @@ export LANG=en_US.UTF-8
 alias tmux="TERM=xterm-256color tmux"
 
 export JAVA_HOME=/opt/java/current
+export SCALA_HOME=/opt/scala/current
+export NODE=/opt/node/current
 export GRADLE_HOME=/opt/gradle/current
+export SBT_HOME=/opt/sbt/current
+export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$NODE/bin:$GRADLE_HOME/bin:$SBT_HOME/bin:$PATH
+
 export GRAILS_HOME=/opt/grails/current
 export SPARK_HOME=/opt/spark/current
-
 export ANDROID_SDK=/opt/google/android-sdk/current
 export ANDROID_NDK_HOME=/opt/google/android/ndk/current
 export IDEA_HOME=/opt/IntelliJ/idea/current
 export WEBSTORM_HOME=/opt/IntelliJ/WebStorm/current
 export VSCODE_HOME=/opt/microsoft/VSCode
-
-export PATH=$GRADLE_HOME/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$IDEA_HOME/bin:$GRAILS_HOME/bin:$ANDROID_SDK/tools:$WEBSTORM_HOME/bin:$VSCODE_HOME:$ANDROID_NDK_HOME:$PATH
+export PATH=$SPARK_HOME/bin:$IDEA_HOME/bin:$GRAILS_HOME/bin:$ANDROID_SDK/tools:$WEBSTORM_HOME/bin:$VSCODE_HOME:$ANDROID_NDK_HOME:$PATH
 
 export EDITOR=vim
 

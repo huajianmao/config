@@ -7,6 +7,7 @@ BREW_APPS=(
 
 BREW_CASK_APPS=(
   alfred
+  basictex
   dropbox
   enpass
   github

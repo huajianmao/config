@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
+# NON-Brew Apps
+# Disco for burn
+
 BREW_APPS=(
+  unrar
   vim
   wget
 )
@@ -21,6 +25,7 @@ BREW_CASK_APPS=(
   omnifocus
   pycharm-pro
   shadowsocksx-ng
+  virtualbox
   visual-studio-code
   webstorm
   wechat

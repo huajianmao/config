@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# References
+# https://github.com/bramus/freshinstall
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
+
 HOSTNAME=mini
 
 # 1. run git to tigger the installation of Xcode Command Line Tools
@@ -8,8 +13,7 @@ git
 # 2. change the hostname to whatever you like
 sudo scutil --set HostName $HOSTNAME
 sudo scutil --set LocalHostName $HOSTNAME
-# Change the Mac's computer name
-# in System Preference -> Sharing
+sudo scutil --set ComputerName $HOSTNAME
 
 # 3. generate the ssh key
 ssh-keygen -t rsa
@@ -32,7 +36,10 @@ ssh-keygen -t rsa
 
 BREW_APPS=(
   dos2unix
+  findutils
+  imagemagick
   mas
+  p7zip
   tmux
   tree
   unrar
@@ -77,17 +84,22 @@ rm -rf /Library/Caches/Homebrew/*
 # You may refer to https://gist.github.com/tpinto/2420293
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-defaults write ~/Library/Preferences/.GlobalPreferences com.apple.swipescrolldirection -bool false
 # proxy
 # power save time
 # keyboard command / option switch
+# input method shortcut
 
 # Terminal
 # terminal close on exit
 # color theme to solarized dark
+# set selection color
+wget https://raw.githubusercontent.com/altercation/solarized/master/osx-terminal.app-colors-solarized/Solarized%20Dark%20ansi.terminal
+wget https://raw.githubusercontent.com/altercation/solarized/master/osx-terminal.app-colors-solarized/Solarized%20Light%20ansi.terminal
 
 # set default shell to zsh
+chsh -s /bin/zsh
 
 
 ####################################
@@ -121,6 +133,7 @@ mas install 497799835 # Xcode
 # NODEJS_PKG_NAME=node-${NODEJS_VERSION}-darwin-x64.tar.gz
 # wget https://nodejs.org/dist/${NODEJS_VERSION}/${NODEJS_PKG_NAME} -o ~/Downloads/${NODEJS_PKG_NAME}
 # sudo tar zxvf ${NODEJS_PKG_NAME} -C ${OPT_DIR}/node/${NODEJS_VERSION}
+
 
 
 

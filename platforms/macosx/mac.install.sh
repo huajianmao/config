@@ -63,6 +63,7 @@ BREW_CASK_APPS=(
   omnifocus
   pycharm
   shadowsocksx-ng
+  teamviewer
   virtualbox
   visual-studio-code
   webstorm

@@ -8,6 +8,7 @@ cd $BASEDIR
 ############################
 sh ./_post/defaults.sh
 sh ./_post/terminal.sh
-sh ./_post/misc.sh
-
 sh ./_post/latex.sh
+
+sh ./_post/misc.sh
+sh ./_post/loginitems.sh

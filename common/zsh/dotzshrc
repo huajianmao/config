@@ -104,3 +104,5 @@ export EDITOR=vim
 export DISPLAY=:0.0
 unsetopt nomatch
 export SPARK_PREPEND_CLASSES=true
+
+umask 022

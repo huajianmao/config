@@ -32,7 +32,7 @@ BREW_CASK_APPS=(
   imazing
   insomnia
   intellij-idea
-  karabiner
+  karabiner-elements
   neteasemusic
   omnifocus
   pycharm

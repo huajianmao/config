@@ -9,10 +9,12 @@ exit
 
 # install Apps
 BREW_APPS=(
+  aria2
   dos2unix
   findutils
   imagemagick
   mas
+  node
   p7zip
   tmux
   tree
@@ -24,8 +26,12 @@ BREW_APPS=(
 BREW_CASK_APPS=(
   alfred
   basictex
+  cheatsheet
+  dash
   dropbox
   enpass
+  flux
+  gimp
   github
   google-chrome
   iina
@@ -36,8 +42,11 @@ BREW_CASK_APPS=(
   neteasemusic
   omnifocus
   pycharm
+  qlstephen
   shadowsocksx-ng
+  snipaste
   teamviewer
+  v2rayu
   virtualbox
   visual-studio-code
   webstorm

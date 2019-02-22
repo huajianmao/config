@@ -11,3 +11,4 @@ exit
 # You will need to login first:
 # mas signin apple.id@gmail.com "password"
 mas install 497799835 # Xcode
+mas install 1176895641 # Spark

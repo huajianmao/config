@@ -7,7 +7,7 @@ exit
 
 # export OPT_DIR=/opt
 
-# Etcher F.lux Franz Gimp SciHub
+# Etcher Franz SciHub
 # Transmission Xcode YoudaoNote
 # Soda Player
 

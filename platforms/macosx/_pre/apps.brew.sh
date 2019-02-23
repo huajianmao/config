@@ -30,6 +30,7 @@ BREW_CASK_APPS=(
   dash
   dropbox
   enpass
+  fliqlo
   flux
   gimp
   github
@@ -45,6 +46,7 @@ BREW_CASK_APPS=(
   qlstephen
   shadowsocksx-ng
   snipaste
+  spectacle
   teamviewer
   v2rayu
   virtualbox

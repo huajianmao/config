@@ -96,6 +96,9 @@ export WEBSTORM_HOME=/opt/IntelliJ/WebStorm/current
 export VSCODE_HOME=/opt/microsoft/VSCode
 export PATH=$SPARK_HOME/bin:$IDEA_HOME/bin:$GRAILS_HOME/bin:$ANDROID_SDK/tools:$WEBSTORM_HOME/bin:$VSCODE_HOME:$ANDROID_NDK_HOME:$PATH
 
+export FLUTTER_HOME=/opt/flutter/current
+export PATH=$PATH:$FLUTTER_HOME/bin
+
 export EDITOR=vim
 
 # autoload predict-on

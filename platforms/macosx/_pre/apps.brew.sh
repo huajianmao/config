@@ -25,6 +25,7 @@ BREW_APPS=(
 
 BREW_CASK_APPS=(
   alfred
+  android-studio
   basictex
   cheatsheet
   dash
@@ -48,6 +49,7 @@ BREW_CASK_APPS=(
   snipaste
   spectacle
   teamviewer
+  thunder
   v2rayu
   virtualbox
   visual-studio-code

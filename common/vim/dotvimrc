@@ -13,13 +13,18 @@ Bundle 'tpope/vim-surround'
 " Bundle 'Yggdroot/indentLine'
 Bundle 'Lokaltog/vim-easymotion'
 
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
+
+Plugin 'jiangmiao/auto-pairs'
 
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'bling/vim-bufferline'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Bundle 'taglist.vim'
 Bundle 'ervandew/supertab'
 

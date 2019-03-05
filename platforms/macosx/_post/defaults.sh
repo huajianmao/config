@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 echo "In partial/defaults"
-exit
 
 ####################################################################################
 # You may refer to

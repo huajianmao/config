@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 echo "In _pre/apps.appstore"
-exit
 
 # FIXME: check if mas is installed and signed in
 

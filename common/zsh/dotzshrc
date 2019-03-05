@@ -83,21 +83,23 @@ alias tmux="TERM=xterm-256color tmux"
 export JAVA_HOME=/opt/java/current
 export SCALA_HOME=/opt/scala/current
 export NODE=/opt/node/current
+export GRAILS_HOME=/opt/grails/current
 export GRADLE_HOME=/opt/gradle/current
 export SBT_HOME=/opt/sbt/current
-export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$NODE/bin:$GRADLE_HOME/bin:$SBT_HOME/bin:$PATH
+export PATH=$PATH:$JAVA_HOME/bin:$SCALA_HOME/bin:$NODE/bin:$GRAILS_HOME/bin:$GRADLE_HOME/bin:$SBT_HOME/bin
 
-export GRAILS_HOME=/opt/grails/current
 export SPARK_HOME=/opt/spark/current
-export ANDROID_SDK=/opt/google/android-sdk/current
-export ANDROID_NDK_HOME=/opt/google/android/ndk/current
+export PATH=$PATH:$SPARK_HOME/bin
+export SPARK_PREPEND_CLASSES=true
+
+export ANDROID_HOME=/opt/google/android/sdk
+export FLUTTER_HOME=/opt/flutter/current
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$FLUTTER_HOME/bin
+
 export IDEA_HOME=/opt/IntelliJ/idea/current
 export WEBSTORM_HOME=/opt/IntelliJ/WebStorm/current
 export VSCODE_HOME=/opt/microsoft/VSCode
-export PATH=$SPARK_HOME/bin:$IDEA_HOME/bin:$GRAILS_HOME/bin:$ANDROID_SDK/tools:$WEBSTORM_HOME/bin:$VSCODE_HOME:$ANDROID_NDK_HOME:$PATH
-
-export FLUTTER_HOME=/opt/flutter/current
-export PATH=$PATH:$FLUTTER_HOME/bin
+export PATH=$PATH:$IDEA_HOME/bin:$WEBSTORM_HOME/bin:$VSCODE_HOME
 
 export EDITOR=vim
 
@@ -106,6 +108,4 @@ export EDITOR=vim
 
 export DISPLAY=:0.0
 unsetopt nomatch
-export SPARK_PREPEND_CLASSES=true
-
 umask 022

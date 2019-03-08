@@ -40,8 +40,10 @@ BREW_CASK_APPS=(
   insomnia
   intellij-idea
   karabiner-elements
+  motrix
   neteasemusic
   omnifocus
+  omnigraffle
   pycharm
   qlstephen
   shadowsocksx-ng

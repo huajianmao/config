@@ -20,6 +20,7 @@ BREW_APPS=(
   unrar
   vim
   wget
+  yarn
 )
 
 BREW_CASK_APPS=(

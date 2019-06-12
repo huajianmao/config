@@ -27,6 +27,7 @@ BREW_CASK_APPS=(
   alfred
   android-studio
   basictex
+  calibre
   cheatsheet
   dash
   dropbox
@@ -36,6 +37,7 @@ BREW_CASK_APPS=(
   gimp
   github
   google-chrome
+  hyperswitch
   iina
   imazing
   insomnia

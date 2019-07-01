@@ -47,6 +47,7 @@ BREW_CASK_APPS=(
   neteasemusic
   omnifocus
   omnigraffle
+  prince
   pycharm
   qlstephen
   shadowsocksx-ng

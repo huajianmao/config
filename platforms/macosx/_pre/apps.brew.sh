@@ -37,6 +37,7 @@ BREW_CASK_APPS=(
   gimp
   github
   google-chrome
+  hammerspoon
   hyperswitch
   iina
   imazing

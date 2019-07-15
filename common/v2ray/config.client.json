@@ -1,0 +1,77 @@
+{
+  "dns" : {
+    "servers" : [
+      "localhost"
+    ]
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 1086,
+      "protocol" : "socks",
+      "tag" : "socksinbound",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : false,
+        "ip" : "127.0.0.1"
+      }
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 1087,
+      "protocol" : "http",
+      "tag" : "httpinbound",
+      "settings" : {
+        "timeout" : 0
+      }
+    }
+  ],
+  "outbounds" : [
+    {
+      "sendThrough" : "0.0.0.0",
+      "mux" : {
+        "enabled" : false,
+        "concurrency" : 8
+      },
+      "protocol" : "vmess",
+      "settings" : {
+        "vnext" : [
+          {
+            "address" : "server.ip <-----FIXME:-----",
+            "users" : [
+              {
+                "id" : "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa <-----FIXME:-----",
+                "alterId" : 32,
+                "security" : "auto",
+                "level" : 0
+              }
+            ],
+            "port" : 12345
+          }
+        ]
+      },
+      "tag" : "tagit",
+      "streamSettings" : {
+        "network" : "tcp",
+        "tcpSettings" : {
+
+        },
+        "security" : "none"
+      }
+    }
+  ],
+  "routing" : {
+    "name" : "all_to_main",
+    "domainStrategy" : "AsIs",
+    "rules" : [
+      {
+        "type" : "field",
+        "outboundTag" : "tagit",
+        "port" : "0-65535"
+      }
+    ]
+  },
+  "log" : {
+    "loglevel" : "error",
+  }
+}

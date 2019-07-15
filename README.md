@@ -1,4 +1,4 @@
-config
+[WIP] config
 ======
 
-Configurations for the common used tools
+This repository holds the configurations for my common used platforms.

@@ -18,7 +18,7 @@ case "${unameout}" in
     *) ;;
 esac
 if [ "${platform}" = "unknown" ]; then
-    echo "Sorry, your OS is not supported yet!"
+    echo "Sorry, your OS (${unameout}) is not supported yet!"
     exit -1
 fi
 
@@ -35,11 +35,11 @@ pushd .
 cd common
 for conf in `ls -d */ | cut -f1 -d'/'`; do
   cd $conf
-  setupfile=./setup.sh
+  setupfile=./${SETUP_FILE_NAME}
 
   if [ -f $setupfile ];
   then
-    echo FIXME: sh ./${SETUP_FILE_NAME}
+    sh $setupfile
   else
     echo "Skip $conf"
   fi

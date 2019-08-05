@@ -56,7 +56,8 @@ BREW_CASK_APPS=(
   spectacle
   teamviewer
   thunder
-  v2rayu
+  # v2rayu
+  v2rayx
   virtualbox
   visual-studio-code
   webstorm

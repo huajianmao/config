@@ -14,6 +14,7 @@ BREW_APPS=(
   imagemagick
   mas
   node
+  octave
   p7zip
   tmux
   tree

@@ -9,6 +9,7 @@ echo "In _pre/apps.brew"
 # install Apps
 BREW_APPS=(
   aria2
+  asciidoctor
   dos2unix
   findutils
   imagemagick

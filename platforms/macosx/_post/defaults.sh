@@ -181,8 +181,14 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 
 ###############################################################################
-# 5. Dock, Dashboard, and hot corners                                         #
+# 5. LaunchPad, Dock, Dashboard, and hot corners                                         #
 ###############################################################################
+echo "Set the Launchpad size to 8 x 6"
+defaults write com.apple.dock springboard-columns -int 8;
+defaults write com.apple.dock springboard-rows -int 6;
+defaults write com.apple.dock ResetLaunchPad -bool TRUE;
+killall Dock
+
 echo "Set the icon size of Dock items to 36 pixels"
 defaults write com.apple.dock tilesize -int 36
 

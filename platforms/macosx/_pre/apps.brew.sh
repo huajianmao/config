@@ -54,6 +54,7 @@ BREW_CASK_APPS=(
   pycharm
   qlstephen
   shadowsocksx-ng
+  snip
   snipaste
   spectacle
   teamviewer

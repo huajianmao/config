@@ -1,0 +1,11 @@
+portainer:
+  container_name: 'portainer'
+  image: 'portainer/portainer'
+  restart: 'always'
+  ports:
+    - '9000:9000'
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
+    - '../../volumes/portainer/data:/data'
+
+# docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ../../volumes/portainer/data:/data portainer/portainer

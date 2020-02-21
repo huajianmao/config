@@ -52,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,13 +101,15 @@ export WEBSTORM_HOME=/opt/IntelliJ/WebStorm/current
 export VSCODE_HOME=/opt/microsoft/VSCode
 export PATH=$PATH:$IDEA_HOME/bin:$WEBSTORM_HOME/bin:$VSCODE_HOME
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin:/snap/bin
 
 export EDITOR=vim
 
 # autoload predict-on
 # predict-on
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export DISPLAY=:0.0
 unsetopt nomatch
 umask 022

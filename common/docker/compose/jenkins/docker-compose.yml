@@ -1,0 +1,13 @@
+jenkins:
+  container_name: 'jenkins'
+  image: 'jenkins/jenkins:lts'
+  restart: 'always'
+  ports:
+    - '8081:8080'
+    - '50000:50000'
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
+    - '../../volumes/jenkins/data:/var/jenkins_home'
+
+#docker run -p 8081:8080 -p 50000:50000 -v ../../volumes/jenkins/data:/var/jenkins_home --restart always -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
+

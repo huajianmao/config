@@ -1,0 +1,11 @@
+docker run --rm -v `pwd`/../../volumes/gitlab/runner:/etc/gitlab-runner gitlab/gitlab-runner register \
+  --non-interactive \
+  --executor "docker" \
+  --docker-image alpine:latest \
+  --url "http://10.9.9.112:10080/" \
+  --registration-token "1WuYe41zpmTCM9yZiBsf" \
+  --description "docker-runner" \
+  --tag-list "docker,aws" \
+  --run-untagged="true" \
+  --locked="false" \
+  --access-level="not_protected"

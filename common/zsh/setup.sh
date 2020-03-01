@@ -40,4 +40,5 @@ case "${unameOut}" in
 esac
 
 git clone https://github.com/robbyrussell/oh-my-zsh.git $OMZRC
+git clone https://github.com/zsh-users/zsh-autosuggestions $OMZRC/custom/plugins/zsh-autosuggestions
 cp hjmao.zsh-theme $OMZRC/themes/

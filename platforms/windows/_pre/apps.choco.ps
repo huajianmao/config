@@ -1,0 +1,10 @@
+
+$APPS = @(
+  "bandizip",
+  "curl"
+  "listray"
+)
+
+foreach ($app in $APPS) {
+  choco install $app
+}

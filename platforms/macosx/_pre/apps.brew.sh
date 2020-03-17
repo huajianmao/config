@@ -34,6 +34,7 @@ BREW_CASK_APPS=(
   dash
   dropbox
   enpass
+  ezip
   fliqlo
   flux
   gimp

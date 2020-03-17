@@ -19,7 +19,7 @@ Plugin 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 
 Plugin 'jiangmiao/auto-pairs'
-
+Plugin 'editorconfig/editorconfig-vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'bling/vim-bufferline'
 Bundle 'scrooloose/syntastic'

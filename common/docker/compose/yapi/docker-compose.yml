@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  db:
+    image: mongo
+    container_name: 'yapidb'
+    restart: always
+    volumes:
+      - ../../volumes/yapi/db:/data/db
+
+  app:
+    image: 'registry.cn-hangzhou.aliyuncs.com/anoy/yapi'
+    container_name: 'yapi'
+    ports:
+      - 3000:3000
+    links:
+      - db
+    workdir: /api/vendors
+    volumes:
+      - ../../volumes/yapi/data:/api
+    restart: always

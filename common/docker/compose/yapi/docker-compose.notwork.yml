@@ -10,12 +10,11 @@ services:
 
   app:
     image: 'registry.cn-hangzhou.aliyuncs.com/anoy/yapi'
+    command: 'server/app.js'
     container_name: 'yapi'
     ports:
-      - 3000:3000
+      - 10.9.9.112:3000:3000
     links:
       - db
-    workdir: /api/vendors
-    volumes:
-      - ../../volumes/yapi/data:/api
+    working_dir: /api/vendors
     restart: always

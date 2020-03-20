@@ -52,8 +52,8 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker docker-compose zsh-autosuggestions)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0,bg=153'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,7 +79,6 @@ export LANG=en_US.UTF-8
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 #screen -dmS proxy python2.7 $GOAGENT_HOME/local/proxy.py
-alias tmux="TERM=xterm-256color tmux"
 
 export JAVA_HOME=/opt/java/current
 export SCALA_HOME=/opt/scala/current
@@ -109,9 +108,12 @@ export EDITOR=vim
 # autoload predict-on
 # predict-on
 
+export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export DISPLAY=:0.0
 unsetopt nomatch
 umask 022
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -115,5 +115,6 @@ export DISPLAY=:0.0
 unsetopt nomatch
 umask 022
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+export PATH=$PATH:~/.yarn/bin:~/.local/bin:/snap/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -20,16 +20,14 @@ RUN apt-get update && apt-get install -qq -y curl bzip2 \
       && conda config --set show_channel_urls yes \
       \
       # @ https://angelmojarro.com/bioinformatics
-      && conda create -n alignment samtools bwa tablet seqtk \
-      && conda create -n binning maxbin2 openjdk \
-      && conda create -n taxonomy metaphlan2 kraken mash \
-      && conda create -n qc fastqc cutadapt seqtk fqtrim seqkit \
-      # && conda create -n mcheck checks-genome \
-      && conda create -n contigs megahit \
+      && conda create -n rnaseq -y samtools bwa tablet seqtk \
+                                   maxbin2 openjdk \
+                                   metaphlan2 kraken mash \
+                                   fastqc cutadapt seqtk fqtrim seqkit \
+                                   checkm-genome \
+                                   megahit \
+                                   sra-tools trimmomatic bowtie2 cufflinks \
+                                   macs2 hisat2 htseq \
+                                   tophat \
       && conda clean --all --yes
-
-# bwa samtools macs2
-# hisat2 samtools sra-tools
-# htseq-count
-# fastqc trimmomatics
 

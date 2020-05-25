@@ -47,6 +47,7 @@ BREW_CASK_APPS=(
   insomnia
   intellij-idea
   karabiner-elements
+  mindmaster
   motrix
   neteasemusic
   omnifocus
@@ -67,6 +68,7 @@ BREW_CASK_APPS=(
   visual-studio-code
   webstorm
   wechat
+  wkhtmltopdf
   xmind
 )
 

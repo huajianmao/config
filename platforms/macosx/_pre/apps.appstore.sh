@@ -11,3 +11,4 @@ echo "In _pre/apps.appstore"
 # mas signin apple.id@gmail.com "password"
 mas install 497799835 # Xcode
 mas install 1176895641 # Spark
+mas install 1518036000 # Sequel Ace

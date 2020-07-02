@@ -12,6 +12,7 @@ BREW_APPS=(
   asciidoctor
   dos2unix
   findutils
+  howdoi
   imagemagick
   mas
   node

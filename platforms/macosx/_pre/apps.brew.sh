@@ -53,14 +53,17 @@ BREW_CASK_APPS=(
   neteasemusic
   omnifocus
   omnigraffle
+  openinterminal
   pock
   prince
   pycharm
   qlstephen
   shadowsocksx-ng
+  #sequel-ace
   snip
   snipaste
   spectacle
+  tableplus
   teamviewer
   thunder
   # v2rayu

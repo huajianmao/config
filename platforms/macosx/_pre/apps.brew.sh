@@ -47,6 +47,7 @@ BREW_CASK_APPS=(
   imazing
   insomnia
   intellij-idea
+  itsycal
   karabiner-elements
   mindmaster
   motrix

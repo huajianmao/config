@@ -30,6 +30,7 @@ BREW_APPS=(
 BREW_CASK_APPS=(
   alfred
   android-studio
+  axure-rp
   basictex
   calibre
   cheatsheet
@@ -61,8 +62,9 @@ BREW_CASK_APPS=(
   prince
   pycharm
   qlstephen
-  shadowsocksx-ng
   #sequel-ace
+  shadowsocksx-ng
+  sketch
   snip
   snipaste
   spectacle

@@ -34,6 +34,7 @@ BREW_CASK_APPS=(
   calibre
   cheatsheet
   dash
+  datagrip
   dropbox
   enpass
   ezip

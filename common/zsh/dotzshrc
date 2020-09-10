@@ -52,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0,bg=153'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=255,bg=236'
 

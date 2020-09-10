@@ -10,6 +10,7 @@ echo "In _pre/apps.brew"
 BREW_APPS=(
   aria2
   asciidoctor
+  autojump
   dos2unix
   findutils
   fswatch

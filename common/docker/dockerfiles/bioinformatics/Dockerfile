@@ -31,3 +31,10 @@ RUN apt-get update && apt-get install -qq -y curl bzip2 \
                                    tophat \
       && conda clean --all --yes
 
+# Install ibm aspera connect
+# https://download.asperasoft.com/download/sw/connect/3.9.9/ibm-aspera-connect-3.9.9.177872-linux-g2.12-64.tar.gz
+# tar zxvf aspera-connect-3.7.4.147727-linux-64.tar.gz
+# bash aspera-connect-3.7.4.147727-linux-64.sh
+# echo 'export PATH=~/.aspera/connect/bin:$PATH' >> ~/.bashrc
+# source ~/.bashrc   
+# cp ~/.aspera/connect/etc/asperaweb_id_dsa.openssh ~/

@@ -14,6 +14,7 @@ BREW_APPS=(
   dos2unix
   findutils
   fswatch
+  gh
   howdoi
   imagemagick
   mas

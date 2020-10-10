@@ -11,6 +11,7 @@ BREW_APPS=(
   aria2
   asciidoctor
   autojump
+  croc
   dos2unix
   findutils
   fswatch

@@ -11,7 +11,9 @@ apt --download-only install \
   python3-pandas python3-matplotlib python3-sklearn python3-seaborn python3-markdown \
   python3-pycodestyle python3-pytest python3-pytest-cov \
   fcitx-module-autoeng-ng fcitx-module-punc-ng fcitx-module-fullwidthchar-enhance \
-  cargo curl xdotool albert imagemagick docker.io fzf mlocate ttf-mscorefonts-installer
+  cargo curl xdotool albert imagemagick docker.io fzf mlocate ttf-mscorefonts-installer \
+  octave unrar
+#autokey @github
 
 sudo apt-get install ibus-sunpinyin smplayer
 sudo apt-get install texlive-science texlive-latex-recommended texlive-publishers texlive-bibtex-extra texlive-xetex texlive-lang-cjk latexmk

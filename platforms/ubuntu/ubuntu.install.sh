@@ -12,7 +12,7 @@ apt --download-only install \
   python3-pycodestyle python3-pytest python3-pytest-cov \
   fcitx-module-autoeng-ng fcitx-module-punc-ng fcitx-module-fullwidthchar-enhance \
   cargo curl xdotool albert imagemagick docker.io fzf mlocate ttf-mscorefonts-installer \
-  octave unrar
+  octave unrar autokey-gtk gnome-tweak-tool
 #autokey @github
 
 sudo apt-get install ibus-sunpinyin smplayer

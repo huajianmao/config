@@ -8,8 +8,8 @@ echo "In _pre/apps.brew"
 
 # install Apps
 BREW_APPS=(
-  aria2
-  asciidoctor
+  # aria2
+  # asciidoctor
   autojump
   croc
   dos2unix
@@ -19,69 +19,68 @@ BREW_APPS=(
   howdoi
   imagemagick
   mas
-  node
+  # node
   octave
   p7zip
   tmux
   tree
-  unrar
   vim
   wget
-  yarn
+  # yarn
 )
 
 BREW_CASK_APPS=(
   alfred
-  android-studio
-  axure-rp
+  # android-studio
+  # axure-rp
   basictex
-  calibre
-  cheatsheet
-  dash
-  datagrip
-  dropbox
+  # calibre
+  # cheatsheet
+  # dash
+  # datagrip
+  # dropbox
   enpass
-  ezip
+  maczip
   fliqlo
   flux
-  gimp
-  github
+  # gimp
+  # github
   google-chrome
   hammerspoon
   hyperswitch
   iina
-  imazing
-  insomnia
+  # imazing
+  # insomnia
   intellij-idea
   itsycal
   karabiner-elements
-  mindmaster
-  motrix
+  # mindmaster
+  # motrix
   neteasemusic
-  omnifocus
-  omnigraffle
-  openinterminal
+  # omnifocus
+  # omnigraffle
+  # openinterminal
   pock
   prince
   pycharm
-  qlstephen
+  # qlstephen
   #sequel-ace
-  shadowsocksx-ng
-  sketch
-  snip
-  snipaste
-  spectacle
-  tableplus
-  teamviewer
-  thunder
+  # shadowsocksx-ng
+  # sketch
+  # snip
+  # snipaste
+  # spectacle
+  # tableplus
+  # teamviewer
+  # thunder
   # v2rayu
   v2rayx
-  virtualbox
+  # virtualbox
   visual-studio-code
   webstorm
   wechat
-  wkhtmltopdf
-  xmind
+  # wkhtmltopdf
+  # xmind
 )
 
 

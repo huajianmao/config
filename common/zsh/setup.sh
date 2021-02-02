@@ -42,5 +42,7 @@ esac
 git clone https://github.com/robbyrussell/oh-my-zsh.git $OMZRC
 git clone https://github.com/zsh-users/zsh-autosuggestions $OMZRC/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $OMZRC/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions $OMZRC/custom/plugins/zsh-completions
+
 
 cp hjmao.zsh-theme $OMZRC/themes/

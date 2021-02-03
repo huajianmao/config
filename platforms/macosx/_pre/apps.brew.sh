@@ -57,6 +57,7 @@ BREW_CASK_APPS=(
   # mindmaster
   # motrix
   neteasemusic
+  notion
   # omnifocus
   # omnigraffle
   # openinterminal
@@ -79,6 +80,7 @@ BREW_CASK_APPS=(
   visual-studio-code
   webstorm
   wechat
+  wpsoffice
   # wkhtmltopdf
   # xmind
 )

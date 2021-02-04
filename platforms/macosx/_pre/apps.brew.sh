@@ -22,6 +22,7 @@ BREW_APPS=(
   # node
   octave
   p7zip
+  # sshfs
   tmux
   tree
   vim
@@ -61,6 +62,7 @@ BREW_CASK_APPS=(
   # omnifocus
   # omnigraffle
   # openinterminal
+  osxfuse
   pock
   prince
   pycharm

@@ -31,7 +31,7 @@ BREW_APPS=(
 )
 
 BREW_CASK_APPS=(
-  alfred
+  # alfred
   # android-studio
   # axure-rp
   basictex
@@ -40,8 +40,8 @@ BREW_CASK_APPS=(
   # dash
   # datagrip
   # dropbox
+  edex-ui
   enpass
-  maczip
   fliqlo
   flux
   # gimp
@@ -55,9 +55,11 @@ BREW_CASK_APPS=(
   intellij-idea
   itsycal
   karabiner-elements
+  maczip
   # mindmaster
   # motrix
   neteasemusic
+  netnewswire
   notion
   # omnifocus
   # omnigraffle
@@ -67,7 +69,9 @@ BREW_CASK_APPS=(
   prince
   pycharm
   # qlstephen
-  #sequel-ace
+  # rectangle
+  raycast
+  # sequel-ace
   # shadowsocksx-ng
   # sketch
   # snip

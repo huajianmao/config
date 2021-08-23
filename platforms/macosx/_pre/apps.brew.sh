@@ -16,6 +16,7 @@ BREW_APPS=(
   findutils
   fswatch
   gh
+  gitfs
   howdoi
   imagemagick
   mas

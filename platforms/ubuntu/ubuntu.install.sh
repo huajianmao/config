@@ -6,6 +6,7 @@ wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu
 apt update
 
 apt --download-only install \
+  gitfs \
   autojump fswatch vim git tmux zsh build-essential curl dos2unix tree exuberant-ctags \
   nodejs npm exfat-fuse exfat-utils dmsetup p7zip-full \
   python3-pandas python3-matplotlib python3-sklearn python3-seaborn python3-markdown \

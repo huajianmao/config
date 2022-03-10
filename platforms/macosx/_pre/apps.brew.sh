@@ -33,6 +33,7 @@ BREW_APPS=(
 
 BREW_CASK_APPS=(
   # alfred
+  android-platform-tools
   # android-studio
   # axure-rp
   basictex

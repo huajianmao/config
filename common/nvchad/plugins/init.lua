@@ -1,11 +1,16 @@
 return {
-  {'williamboman/nvim-lsp-installer'},
+  {
+    'williamboman/nvim-lsp-installer',
+    config = function()
+      require("custom.plugins.lsp-installer").setup()
+    end
+  },
   { 'voldikss/vim-floaterm' },
   {
     'jose-elias-alvarez/null-ls.nvim',
     after = "nvim-lspconfig",
     config = function()
-      require("custom.plugins.configs.null-ls").setup()
+      require("custom.plugins.null-ls").setup()
     end
   },
   {

@@ -4,11 +4,12 @@
 local M = {}
 
 local userPlugins = require "custom.plugins"
+
 M.plugins = {
   install = userPlugins,
   options = {
     lspconfig = {
-      setup_lspconf = "custom.plugins.configs.lspconfig",
+      setup_lspconf = "custom.plugins.lspconfig",
     }
   }
 }

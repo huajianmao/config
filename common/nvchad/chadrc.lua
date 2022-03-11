@@ -5,7 +5,12 @@ local M = {}
 
 local userPlugins = require "custom.plugins"
 M.plugins = {
-  install = userPlugins
+  install = userPlugins,
+  options = {
+    lspconfig = {
+      setup_lspconf = "custom.plugins.configs.lspconfig",
+    }
+  }
 }
 -- make sure you maintain the structure of `core/default_config.lua` here,
 -- example of changing theme:

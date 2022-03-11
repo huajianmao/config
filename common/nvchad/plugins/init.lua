@@ -1,4 +1,5 @@
 return {
+  {'williamboman/nvim-lsp-installer'},
   { 'voldikss/vim-floaterm' },
   {
     'jose-elias-alvarez/null-ls.nvim',

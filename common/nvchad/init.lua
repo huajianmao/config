@@ -13,3 +13,6 @@ map("n", "<leader>tt", ":FloatermToggle <CR>")
 --
 map("n", "<leader><C-w>", ":bp<bar>sp<bar>bn<bar>bd<CR>")
 vim.wo.relativenumber = true
+
+vim.g.nvim_tree_group_empty = 1
+

@@ -5,6 +5,8 @@ return {
     end
   },
 
+  ["mfussenegger/nvim-jdtls"] = {},
+
   ["voldikss/vim-floaterm"] = {
     config = function()
       require("custom.plugins.configs.floatterm").setup()
@@ -12,32 +14,32 @@ return {
   },
 
   ["windwp/nvim-ts-autotag"] = {
-      ft = { "html", "javascriptreact" },
-      after = "nvim-treesitter",
-      config = function()
-        local present, autotag = pcall(require, "nvim-ts-autotag")
+    ft = { "html", "javascriptreact" },
+    after = "nvim-treesitter",
+    config = function()
+      local present, autotag = pcall(require, "nvim-ts-autotag")
 
-        if present then
-          autotag.setup()
-        end
-      end,
+      if present then
+        autotag.setup()
+      end
+    end,
   },
 
   ["jose-elias-alvarez/null-ls.nvim"] = {
-      after = "nvim-lspconfig",
-      config = function()
-        require "custom.plugins.configs.null-ls"
-      end,
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.null-ls"
+    end,
   },
 
   ["Pocco81/TrueZen.nvim"] = {
     cmd = {
-       "TZAtaraxis",
-       "TZMinimalist",
-       "TZFocus",
+      "TZAtaraxis",
+      "TZMinimalist",
+      "TZFocus",
     },
     config = function()
-       require "custom.plugins.configs.truezen"
+      require "custom.plugins.configs.truezen"
     end,
   },
 
@@ -50,9 +52,9 @@ return {
   },
 
   ["nvim-treesitter/playground"] = {
-      cmd = "TSCaptureUnderCursor",
-      config = function()
-        require("nvim-treesitter.configs").setup()
-      end,
+    cmd = "TSCaptureUnderCursor",
+    config = function()
+      require("nvim-treesitter.configs").setup()
+    end,
   },
 }

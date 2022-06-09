@@ -1,9 +1,9 @@
 local M = {}
 
 --
--- M.disabled = {
+M.disabled = {
 --    "<C-n>",
--- }
+}
 
 M.truzen = {
    n = {
@@ -19,6 +19,12 @@ M.treesitter = {
    },
 }
 
+M.floatterm = {
+  n = {
+    ["<leader>tt"] = {"<cmd> FloatermToggle <CR>", "   toggle float term"},
+  }
+}
+
 M.shade = {
    n = {
       ["<leader>s"] = {
@@ -29,6 +35,12 @@ M.shade = {
          "   toggle shade.nvim",
       },
    },
+}
+
+M.misc = {
+  n = {
+    ["<leader><C-w>"] = {"<cmd> bp<bar>sp<bar>bn<bar>bd<CR>", "   close buffer"}
+  }
 }
 
 return M

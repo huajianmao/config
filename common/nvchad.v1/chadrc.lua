@@ -1,6 +1,6 @@
 local M = {}
 
-local overrides = require "custom.overrides"
+local overrides = require "custom.configs.overrides"
 
 M.plugins = {
   options = {
@@ -30,6 +30,6 @@ M.ui = {
    theme = "onedark",
 }
 
-M.mappings = require "custom.mappings"
+M.mappings = require "custom.configs.mappings"
 
 return M

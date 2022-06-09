@@ -5,7 +5,11 @@ return {
     end
   },
 
-  ["voldikss/vim-floaterm"] = {},
+  ["voldikss/vim-floaterm"] = {
+    config = function()
+      require("custom.plugins.configs.floatterm").setup()
+    end
+  },
 
   ["windwp/nvim-ts-autotag"] = {
       ft = { "html", "javascriptreact" },
@@ -26,21 +30,29 @@ return {
       end,
   },
 
+  ["Pocco81/TrueZen.nvim"] = {
+    cmd = {
+       "TZAtaraxis",
+       "TZMinimalist",
+       "TZFocus",
+    },
+    config = function()
+       require "custom.plugins.configs.truezen"
+    end,
+  },
+
+  ["nvim-neorg/neorg"] = {
+    ft = "norg",
+    after = "nvim-treesitter",
+    config = function()
+      require "custom.plugins.configs.neorg"
+    end,
+  },
+
   ["nvim-treesitter/playground"] = {
       cmd = "TSCaptureUnderCursor",
       config = function()
         require("nvim-treesitter.configs").setup()
       end,
-  },
-
-  ["andreadev-it/shade.nvim"] = {
-    module = "shade",
-    config = function()
-      require("shade").setup {
-        overlay_opacity = 50,
-        opacity_step = 1,
-        exclude_filetypes = { "NvimTree" },
-      }
-    end,
   },
 }

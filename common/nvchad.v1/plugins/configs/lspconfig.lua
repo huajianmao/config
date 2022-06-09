@@ -3,7 +3,7 @@ local M = {}
 M.setup_lsp = function(attach, capabilities)
    local lspconfig = require "lspconfig"
 
-   local servers = { "html", "cssls", "bashls", "emmet_ls", "tsserver", "rust_analyzer", "jsonls", "java_language_server" }
+   local servers = { "html", "cssls", "jsonls", "rust_analyzer", "tsserver"}
 
    for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {
@@ -11,6 +11,8 @@ M.setup_lsp = function(attach, capabilities)
          capabilities = capabilities,
       }
    end
+
+   lspconfig.jdtls.setup {}
 end
 
 return M

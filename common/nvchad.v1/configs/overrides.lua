@@ -29,6 +29,7 @@ M.nvimtree = {
 
    renderer = {
       highlight_git = true,
+      group_empty = true,
       icons = {
          show = {
             git = true,

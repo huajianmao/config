@@ -4,7 +4,7 @@ local b = null_ls.builtins
 local sources = {
    b.formatting.prettier,
    b.formatting.google_java_format,
-   b.formatting.json_tool,
+   -- b.formatting.json_tool,
 
    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
    b.formatting.deno_fmt,

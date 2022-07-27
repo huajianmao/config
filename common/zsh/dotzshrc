@@ -109,7 +109,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export VSCODE_HOME=/opt/microsoft/VSCode
 # export PATH=$PATH:$IDEA_HOME/bin:$WEBSTORM_HOME/bin:$VSCODE_HOME
 
-export PATH=$PATH:~/.cargo/bin:~/.yarn/bin:~/.local/bin:/snap/bin
+export NEOVIM_HOME=/opt/nvim/current
+
+export PATH=$PATH:~/.cargo/bin:~/.yarn/bin:~/.local/bin:/snap/bin:$NEOVIM_HOME/bin
 
 # autoload predict-on
 # predict-on

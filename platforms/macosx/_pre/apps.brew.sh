@@ -33,6 +33,7 @@ BREW_APPS=(
 
 BREW_CASK_APPS=(
   # alfred
+  alacritty
   android-platform-tools
   # android-studio
   # axure-rp
@@ -54,14 +55,17 @@ BREW_CASK_APPS=(
   iina
   # imazing
   # insomnia
+  inkscape
   intellij-idea
   itsycal
   karabiner-elements
+  listen1
   maczip
   # mindmaster
   # motrix
   neteasemusic
   netnewswire
+  nextcloud
   notion
   # omnifocus
   # omnigraffle
@@ -93,6 +97,9 @@ BREW_CASK_APPS=(
   # xmind
 )
 
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
 
 brew install ${BREW_APPS[@]}
 brew cask install --appdir="/Applications" ${BREW_CASK_APPS[@]}

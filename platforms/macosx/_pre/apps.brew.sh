@@ -67,6 +67,7 @@ BREW_CASK_APPS=(
   netnewswire
   nextcloud
   notion
+  obsidian
   # omnifocus
   # omnigraffle
   # openinterminal

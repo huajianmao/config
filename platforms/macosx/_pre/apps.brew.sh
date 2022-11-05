@@ -84,8 +84,10 @@ BREW_CASK_APPS=(
   # snip
   # snipaste
   # spectacle
+  ssh-tunnel-manager
   # tableplus
   # teamviewer
+  tencent-lemon
   # thunder
   # v2rayu
   v2rayx

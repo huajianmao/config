@@ -76,8 +76,9 @@ BREW_CASK_APPS=(
   prince
   pycharm
   # qlstephen
-  # rectangle
+  rapidapi
   raycast
+  # rectangle
   # sequel-ace
   # shadowsocksx-ng
   # sketch

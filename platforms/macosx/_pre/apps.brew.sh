@@ -62,6 +62,7 @@ BREW_CASK_APPS=(
   listen1
   maczip
   # mindmaster
+  miniconda
   # motrix
   neteasemusic
   netnewswire

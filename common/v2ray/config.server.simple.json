@@ -1,0 +1,23 @@
+{
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 11637,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "b831381d-6324-4d53-ad4f-8cda48b30811"
+                        "alertId": 0,
+                        "security": "aes-128-gcm"
+                    }
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}

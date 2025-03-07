@@ -11,7 +11,7 @@ echo "In partial/defaults"
 ####################################################################################
 
 
-# Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
+# Close any open System Preferences panes, to prevent them from overriding settings we're about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
@@ -22,9 +22,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # 1. General UI/UX                                                            #
 ###############################################################################
-
-echo "Set standby delay to 24 hours (default is 1 hour)"
-sudo pmset -a standbydelay 86400
 
 echo "Disable the sound effects on boot"
 sudo nvram SystemAudioVolume=" "
@@ -48,7 +45,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 echo "Disable Resume system-wide"
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
-echo "Disable automatic capitalization as it’s annoying when typing code"
+echo "Disable automatic capitalization as it's annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 
@@ -57,7 +54,7 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 ###############################################################################
 
 echo "Trackpad: enable tap to click for this user and for the login screen"
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
@@ -100,9 +97,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 echo "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-echo "Enable subpixel font rendering on non-Apple LCDs"
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 echo "Enable HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
@@ -148,9 +142,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 echo "Enable snap-to-grid for icons on the desktop and in other icon views"
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist || \
+/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:IconViewSettings:arrangeBy string grid" ~/Library/Preferences/com.apple.finder.plist
 
 echo "Increase grid spacing for icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
@@ -192,7 +185,7 @@ killall Dock
 echo "Set the icon size of Dock items to 36 pixels"
 defaults write com.apple.dock tilesize -int 36
 
-echo "Minimize windows into their application’s icon"
+echo "Minimize windows into their application's icon"
 defaults write com.apple.dock minimize-to-application -bool true
 
 echo "Automatically hide and show the Dock"
@@ -211,7 +204,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 echo "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true
 
-echo "Don’t show recent applications in Dock"
+echo "Don't show recent applications in Dock"
 defaults write com.apple.dock show-recents -bool false
 
 # Hot corners
@@ -242,9 +235,6 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Set default shell to zsh"
-chsh -s /bin/zsh
-
 ###############################################################################
 # 7. SSD-specific tweaks                                                      #
 ###############################################################################
@@ -255,7 +245,7 @@ echo "Remove the sleep image file to save disk space"
 sudo rm /private/var/vm/sleepimage
 echo "Create a zero-byte file instead ..."
 sudo touch /private/var/vm/sleepimage
-echo "... and make sure it can’t be rewritten"
+echo "... and make sure it can't be rewritten"
 sudo chflags uchg /private/var/vm/sleepimage
 
 
@@ -273,11 +263,11 @@ sudo chflags uchg /private/var/vm/sleepimage
 # # Use `~/Downloads` to store completed downloads
 # defaults write org.m0k.transmission DownloadLocationConstant -bool true
 
-# # Don’t prompt for confirmation before downloading
+# # Don't prompt for confirmation before downloading
 # defaults write org.m0k.transmission DownloadAsk -bool false
 # defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
-# # Don’t prompt for confirmation before removing non-downloading active transfers
+# # Don't prompt for confirmation before removing non-downloading active transfers
 # defaults write org.m0k.transmission CheckRemoveDownloading -bool true
 
 # # Trash original torrent files

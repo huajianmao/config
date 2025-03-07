@@ -19,12 +19,14 @@ umask 022
 alias vim="nvim"
 
 # . "$HOME/.local/bin/env"
-export NODE_HOME=/opt/node/current
-export NEOVIM_HOME=/opt/nvim/current
+export NODE_HOME=$HOME/opt/node/current
+export NEOVIM_HOME=$HOME/opt/neovim/current
 export PATH=$NODE_HOME/bin:$NEOVIM_HOME/bin:$PATH
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+[ -f ~/workspace/config/common/uvenv ] && source ~/workspace/config/common/uvenv
 
 export HOMEBREW_API_DOMAIN="https://mirrors.aliyun.com/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
@@ -36,3 +38,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export UV_DEFAULT_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple

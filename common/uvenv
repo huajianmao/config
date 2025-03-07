@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# Default directory for environments (modify as needed)
+DEFAULT_DIR="$HOME/opt/venvs"
+
+uvenv() {
+  # Function to display usage
+  usage() {
+    echo "Usage: $0 <command> [arguments]"
+    echo "Commands:"
+    echo "  list [ENV_DIR]    List available environments (uses DEFAULT_DIR if ENV_DIR not provided)"
+    echo "  activate ENV_NAME Activate the specified environment from DEFAULT_DIR"
+    exit 1
+  }
+
+  # Function to list environments
+  list_environments() {
+    local dir="$1"
+    echo "Available environments in $dir:"
+    found=false
+
+    # Check if directory exists
+    if [ ! -d "$dir" ]; then
+      echo "Error: Directory '$dir' does not exist"
+      exit 1
+    fi
+
+    for env_dir in "$dir"/*; do
+      if [ -d "$env_dir" ] && [ -f "$env_dir/bin/activate" ]; then
+        env_name=$(basename "$env_dir")
+        echo "  - $env_name"
+        found=true
+      fi
+    done
+
+    if [ "$found" = false ]; then
+      echo "  (No virtual environments found)"
+    fi
+  }
+
+  # Check if command is provided
+  if [ $# -lt 1 ]; then
+    usage
+  fi
+
+  # Process commands
+  case "$1" in
+  list)
+    # Use provided directory or default
+    if [ $# -eq 1 ]; then
+      list_environments "$DEFAULT_DIR"
+    elif [ $# -eq 2 ]; then
+      list_environments "$2"
+    else
+      echo "Error: Too many arguments for 'list' command"
+      usage
+    fi
+    ;;
+
+  activate)
+    if [ $# -ne 2 ]; then
+      echo "Error: 'activate' requires exactly one environment name"
+      usage
+    fi
+
+    env_path="$DEFAULT_DIR/$2"
+    activate_script="$env_path/bin/activate"
+
+    if [ -d "$env_path" ] && [ -f "$activate_script" ]; then
+      echo "Going to activate '$2' ..."
+      source "$activate_script"
+    else
+      echo "Error: Environment '$2' not found in $DEFAULT_DIR"
+      exit 1
+    fi
+    ;;
+
+  *)
+    echo "Error: Unknown command '$1'"
+    usage
+    ;;
+  esac
+}

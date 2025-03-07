@@ -23,7 +23,16 @@ function conda_env {
 }
 local conda_env='$(conda_env)'
 
-PROMPT="┌─%{$FG[040]%}%n%{$reset_color%} at %{$FG[033]%}$(box_name)%{$reset_color%} in $FG[031]%}${current_dir}%{$reset_color%}${git_info}${conda_env}
+function uv_env {
+  if [[ -n $VIRTUAL_ENV_PROMPT ]]; then
+    echo " $VIRTUAL_ENV_PROMPT "
+  else
+    echo ""
+  fi
+}
+local uv_env='$(uv_env)'
+
+PROMPT="┌─%{$FG[040]%}%n%{$reset_color%} at %{$FG[033]%}$(box_name)%{$reset_color%} in $FG[031]%}${current_dir}%{$reset_color%}${git_info}${uv_env}
 └─${prompt_char}%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" <%{$fg[255]%}"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+eval $(xdotool getmouselocation --shell)
+echo "$X $Y" >~/.config/xdotool/wechat.pos

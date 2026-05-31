@@ -1,0 +1,29 @@
+#!/bin/bash
+
+exec >>/tmp/nm-dispatcher-debug.log 2>&1
+set -x
+
+INTERFACE=$1
+STATUS=$2
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') - Interface: $INTERFACE, Status: $STATUS"
+
+URL="x.y.z.1"
+USERNAME="xxxxx"
+PASSWORD="xxxxxxxx"
+AUTH_TAG="xxxxxxxx"
+
+if [ "$STATUS" = "up" ]; then
+  sleep 5
+  echo "Checking connectivity..."
+
+  if ! /usr/bin/ping -c 1 -W 3 172.16.16.1 >/dev/null 2>&1; then
+    echo "No connectivity, attempting login..."
+    /usr/bin/curl -s -X POST "http://$URL/ac_portal/login.php" \
+      -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" \
+      -d "opr=pwdLogin&userName=$USERNAME&pwd=$PASSWORD&auth_tag=$AUTH_TAG&rememberPwd=1"
+    echo "Login request sent"
+  else
+    echo "Already authenticated!"
+  fi
+fi

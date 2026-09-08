@@ -20,7 +20,8 @@ alias vim="nvim"
 # . "$HOME/.local/bin/env"
 export NODE_HOME=/opt/node/current
 export NEOVIM_HOME=/opt/neovim/current
-export PATH=$NODE_HOME/bin:$NEOVIM_HOME/bin:$PATH
+export BLENDER_HOME=/opt/blender/current
+export PATH=$BLENDER_HOME:$NODE_HOME/bin:$NEOVIM_HOME/bin:$PATH
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -39,3 +40,8 @@ esac
 # pnpm end
 
 export UV_DEFAULT_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'

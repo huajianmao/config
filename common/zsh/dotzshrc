@@ -30,18 +30,15 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export HOMEBREW_API_DOMAIN="https://mirrors.aliyun.com/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
-
-# pnpm
-export PNPM_HOME="/Users/hjmao/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 export UV_DEFAULT_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+SECRETS_FILE=~/.secrets.zsh
+if [[ -f $SECRETS_FILE && -r $SECRETS_FILE ]]; then
+  source "$SECRETS_FILE"
+fi
+

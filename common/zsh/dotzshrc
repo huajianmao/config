@@ -31,8 +31,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export HOMEBREW_API_DOMAIN="https://mirrors.aliyun.com/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 export UV_DEFAULT_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
-export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export RUSTUP_DIST_SERVER=https://repo.huaweicloud.com/rustup
+export RUSTUP_UPDATE_ROOT=https://repo.huaweicloud.com/rustup/rustup
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -42,3 +42,5 @@ if [[ -f $SECRETS_FILE && -r $SECRETS_FILE ]]; then
   source "$SECRETS_FILE"
 fi
 
+ARKCLI_ZSH=~/workspace/config/gpt/arkcli/arkcli.zsh
+[ -f $ARKCLI_ZSH ] && source $ARKCLI_ZSH

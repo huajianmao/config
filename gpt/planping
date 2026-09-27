@@ -1,0 +1,111 @@
+#!/usr/bin/env bash
+set -u
+
+usage() {
+  cat <<EOF
+Usage: $(basename "$0") <plans-file>
+
+plans-file 每行格式（空白分隔，# 开头为注释行）：
+  name  provider  model  key
+
+示例：
+  $(basename "$0") plans.txt
+  $(basename "$0") /etc/llm-checks/prod.txt
+EOF
+}
+
+if [ $# -lt 1 ]; then
+  usage >&2
+  exit 2
+fi
+
+case "$1" in
+-h | --help)
+  usage
+  exit 0
+  ;;
+esac
+
+PLANS_FILE=$1
+if [ ! -r "$PLANS_FILE" ]; then
+  echo "plans file not found or unreadable: $PLANS_FILE" >&2
+  exit 1
+fi
+
+# ----------------
+# providers
+# ----------------
+declare -A URL
+declare -A TYPE
+
+URL[volcano]="https://ark.cn-beijing.volces.com/api/coding/v3"
+TYPE[volcano]="openai"
+
+URL[zhipu]="https://open.bigmodel.cn/api/paas/v4"
+TYPE[zhipu]="openai"
+
+URL[openai]="https://api.openai.com/v1"
+TYPE[openai]="openai"
+
+URL[anthropic]="https://api.anthropic.com/v1"
+TYPE[anthropic]="anthropic"
+
+log() {
+  # log <name> <status>
+  printf '%s %-16s %s\n' "$(date '+%F %T')" "$1" "$2"
+}
+
+call() {
+  local name=$1 provider=$2 model=$3 key=$4
+
+  if [ -z "$key" ]; then
+    log "$name" "FAIL(MISSING_KEY)"
+    return 1
+  fi
+
+  local http_code
+  if [ "${TYPE[$provider]:-}" = "anthropic" ]; then
+    http_code=$(curl -s -o /dev/null -w '%{http_code}' \
+      "${URL[$provider]}/messages" \
+      -H "x-api-key: $key" \
+      -H "anthropic-version: 2023-06-01" \
+      -H "content-type: application/json" \
+      -d "{
+            \"model\":\"$model\",
+            \"max_tokens\":5,
+            \"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]
+        }")
+  else
+    http_code=$(curl -s -o /dev/null -w '%{http_code}' \
+      "${URL[$provider]}/chat/completions" \
+      -H "Authorization: Bearer $key" \
+      -H "content-type: application/json" \
+      -d "{
+            \"model\":\"$model\",
+            \"max_tokens\":5,
+            \"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]
+        }")
+  fi
+
+  if [ -z "$http_code" ] || [ "$http_code" = "000" ]; then
+    log "$name" "FAIL(ERR)"
+    return 1
+  fi
+
+  case "$http_code" in
+  2[0-9][0-9]) log "$name" "OK($http_code)" ;;
+  *) log "$name" "FAIL($http_code)" ;;
+  esac
+}
+
+if [ ! -r "$PLANS_FILE" ]; then
+  echo "plans file not found or unreadable: $PLANS_FILE" >&2
+  exit 1
+fi
+
+while read -r name provider model key _; do
+  [ -z "${name:-}" ] && continue
+  case "$name" in \#*) continue ;; esac
+  [ -z "${key:-}" ] && continue
+  call "$name" "$provider" "$model" "$key"
+done <"$PLANS_FILE"

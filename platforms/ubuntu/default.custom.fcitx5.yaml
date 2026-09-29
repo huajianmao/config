@@ -1,0 +1,7 @@
+# 逗号句号翻页
+# 两个键都用 has_menu：只要有候选就被拦截为翻页，不会「上屏候选＋输出标点」
+# 副作用：候选存在时按 , 或 . 不再输出标点，需先空格/数字键上屏，再按标点
+patch:
+  key_binder/bindings/+:
+    - { accept: comma, send: Page_Up, when: has_menu }
+    - { accept: period, send: Page_Down, when: has_menu }
